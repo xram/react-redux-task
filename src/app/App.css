@@ -1,0 +1,9 @@
+body {
+  background: rgb(247, 248, 250);
+  font-family: sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
