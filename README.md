@@ -1,3 +1,17 @@
+# Quickstart
+
+Prerequisites: [npm](https://docs.npmjs.com/about-npm/) and [Node 12.x](https://nodejs.org/en/)
+
+Steps to get the site running locally:
+
+- Clone the repository.
+- `npm ci` to install dependencies.
+- `npm run start` to compile the site and launch it in your browser.
+
+Assumptions: Users will be using Chrome.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
