@@ -1,13 +1,16 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Route } from "react-router-dom";
 import { fetchCompanies } from "../features/companies/companiesSlice";
 import CompanyDetail from "../features/companies/Detail";
 import CompanyList from "../features/companies/List";
+import Spinner from "../components/Spinner";
 import styles from "./App.module.scss";
+import { RootState } from "./rootReducer";
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
+  const { isLoading } = useSelector(({ companies }: RootState) => companies);
 
   useEffect(
     () => {
@@ -15,6 +18,10 @@ const App: React.FC = () => {
     },
     [dispatch]
   );
+
+  if (isLoading) {
+    return <Spinner />;
+  }
 
   return (
     <>
