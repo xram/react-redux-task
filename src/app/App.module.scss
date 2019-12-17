@@ -1,0 +1,44 @@
+body {
+  background: rgb(247, 248, 250);
+  color: rgb(130, 130, 130);
+  font-family: sans-serif;
+  font-size: 0.75rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(44, 44, 44);
+  margin-top: 0;
+}
+
+:global(.sr-only) {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem 0;
+}
+
+.header {
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 5px 5px 0px rgba(240, 240, 240, 1);
+  color: rgb(123, 123, 123);
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}

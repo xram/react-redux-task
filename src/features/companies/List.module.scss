@@ -1,14 +1,18 @@
 .container {
   border-spacing: 0 4px;
-  font-size: 0.75rem;
   width: 100%;
 
   tr {
     background: rgb(254, 255, 255);
+    transition: background-color 0.2s;
+
+    &:hover {
+      background: rgb(243, 244, 246);
+    }
   }
 
   th,
-  td {
+  a {
     padding: 1rem 2rem;
     text-align: left;
   }
@@ -16,5 +20,16 @@
   th {
     color: rgb(126, 62, 105);
     text-transform: uppercase;
+  }
+
+  td {
+    cursor: pointer;
+    padding: 0;
+  }
+
+  a {
+    color: inherit;
+    display: block;
+    text-decoration: none;
   }
 }

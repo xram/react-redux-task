@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { Route } from "react-router-dom";
 import { fetchCompanies } from "../features/companies/companiesSlice";
-import List from "../features/companies/List";
-import "./App.css";
+import CompanyDetail from "../features/companies/Detail";
+import CompanyList from "../features/companies/List";
+import styles from "./App.module.scss";
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
@@ -15,9 +17,13 @@ const App: React.FC = () => {
   );
 
   return (
-    <div className="container">
-      <List />
-    </div>
+    <>
+      <header className={styles.header}>Logo</header>
+      <div className={styles.container}>
+        <Route component={CompanyList} exact={true} path="/" />
+        <Route component={CompanyDetail} path="/company/:id" />
+      </div>
+    </>
   );
 };
 
